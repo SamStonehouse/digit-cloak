@@ -1,6 +1,6 @@
 {
   "name": "digit-cloak",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A number bitmask generation library for nodejs",
   "dependencies": {
     "bignum": "^0.11.0",
@@ -10,7 +10,7 @@
     "jasmine-node": "^1.14.5"
   },
   "scripts": {
-  	"test": "./node_modules/.bin/jasmine-node spec"
+    "test": "./node_modules/.bin/jasmine-node spec"
   },
   "main": "cloak.js",
   "author": "Sam Stonehouse (https://github.com/SamStonehouse/)"
