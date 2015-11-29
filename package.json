@@ -12,5 +12,6 @@
   "scripts": {
   	"test": "./node_modules/.bin/jasmine-node spec"
   },
-  "main": "cloak.js"
+  "main": "cloak.js",
+  "author": "Sam Stonehouse (https://github.com/SamStonehouse/)"
 }
