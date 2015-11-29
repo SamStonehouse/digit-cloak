@@ -36,7 +36,7 @@ Cloak.prototype.addValue = function(value) {
 Cloak.prototype.addValues = function(values) {
 	var masks = [];
 	var that = this;
-	values.forEach(function (value) {
+	values.forEach(function(value) {
 		masks.push(that.addValue(value));
 	});
 
