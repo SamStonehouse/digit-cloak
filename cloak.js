@@ -35,11 +35,11 @@ Cloak.prototype.addValue = function(value) {
 
 Cloak.prototype.addValues = function(values) {
 	var masks = [];
-	for (var key in values) {
-		if(values.hasOwnProperty(key)) {
-			masks.push(this.addValue(values[key]));
-		}
-	}
+	var that = this;
+	values.forEach(function (value) {
+		masks.push(that.addValue(value));
+	});
+
 	return masks;
 };
 
@@ -64,7 +64,7 @@ Cloak.prototype.getValuesFromMask = function(mask) {
 	var returnVals = [];
 
 	for (var key in this.masks) {
-		if (this.masks.hasOwnProperty(key)) {
+		if (_.has(this.masks, key)) {
 			if ((mask & key) > 0) {
 				returnVals.push(this.masks[key]);
 			}

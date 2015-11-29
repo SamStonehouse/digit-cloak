@@ -62,9 +62,13 @@ You can fetch the key-value pair object to check what values are used
 
 Due to the number limit of JS there's a limit of ~30 values which this can provide masks for. In the near future I aim to update this to use bignum.js to increase that, hoping that it won't cause too much of a slowdown when doing a large bitwise add.
 
+It doesn't accept objects and arrays as values due to the way I've implimented it
+
 
 ## Future work
 
+- Finish tests
 - Make the whole thing immutable
 - Use bignum.js for dealing with larger numbers
 - Make method names use proper language
+- Allow all JS types to be used as array values
