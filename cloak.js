@@ -56,9 +56,25 @@ Cloak.prototype.getMaskForValue = function(value) {
 	return undefined;
 };
 
+Cloak.prototype.getMaskForValues = function(values) {
+	var mask = 0;
+
+	values.forEach((value) => {
+		if (_.has(this.reverseMasks, value)) {
+			mask+= this.reverseMasks[value];
+		}
+	});
+
+	return mask;
+}
+
 Cloak.prototype.getValuesFromMask = function(mask) {
 	if (typeof mask === 'undefined') {
 		return [];
+	}
+
+	if (mask === -1) {
+		mask = Math.pow(2, this.numMasks) - 1;
 	}
 
 	var returnVals = [];
